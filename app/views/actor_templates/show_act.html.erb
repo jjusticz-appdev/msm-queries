@@ -1,46 +1,46 @@
-<h1>Director #<%=@id_num%> details</h1>
+<h1>Actor #<%=@id_num%> details</h1>
 
 <dl>
   <dt>
     Name
   </dt>
   <dd>
-    <%=@record.name%>
+    <%=@act.name%>
   </dd>
 
   <dt>
     Dob
   </dt>
   <dd>
-    <%=@record.dob%>
+    <%=@act.dob%>
   </dd>
 
   <dt>
     Bio
   </dt>
   <dd>
-    <%=@record.bio%>
+    <%=@act.bio%>
   </dd>
 
   <dt>
     Image
   </dt>
   <dd>
-    <img src="https://robohash.org/<%=@record.image%>">
+    <img src="https://robohash.org/<%=@act.image%>">
   </dd>
 
   <dt>
     Created at
   </dt>
   <dd>
-    <%=time_ago_in_words(@record.created_at)%> ago
+    <%=time_ago_in_words(@act.created_at)%> ago
   </dd>
 
   <dt>
     Updated at
   </dt>
   <dd>
-    <%=time_ago_in_words(@record.updated_at)%> ago
+    <%=time_ago_in_words(@act.updated_at)%> ago
   </dd>
 </dl>
 
@@ -49,12 +49,6 @@
 <table border="1">
 <tr>
     <td>
-      Id
-    </td>
-    <td>
-      Image
-    </td>
-    <td>
       Title
     </td>
     <td>
@@ -62,6 +56,12 @@
     </td>
     <td>
       Director
+    </td>
+    <td>
+      Character name
+    </td>
+    <td>
+      
     </td>
     <td>
       

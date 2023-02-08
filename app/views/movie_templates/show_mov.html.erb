@@ -37,6 +37,13 @@
   </dd>
 
   <dt>
+    Director
+  </dt>
+  <dd>
+    <%=Director.where({ :id => @mov.director_id}).at(0).name%>
+  </dd>
+
+  <dt>
     Created at
   </dt>
   <dd>
