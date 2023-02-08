@@ -63,29 +63,23 @@
     <td>
       
     </td>
-    <td>
-      
-    </td>
   </tr>
-<% @filmography.each do |a_film|%>
+<% @roles.each do |a_role|%>
   <tr>
     <td>
-      <%=a_film.id%>
+      <%=Movie.where({ :id => a_role.movie_id}).at(0).title%>
     </td>
     <td>
-      <img src="https://robohash.org/<%=a_film.image%>">
+      <%=Movie.where({ :id => a_role.movie_id}).at(0).year%>
     </td>
     <td>
-      <%=a_film.title%>
+      <%=Director.where({ :id => Movie.where({ :id => a_role.movie_id}).at(0).director_id}).at(0).name%>
     </td>
     <td>
-      <%=a_film.year%>
+      <%=a_role.name%>
     </td>
     <td>
-      <%=Director.where({ :id => a_film.director_id}).at(0).name%>
-    </td>
-    <td>
-      <a href="/movies/<%=a_film.id%>">
+      <a href="/movies/<%=a_role.movie_id%>">
       Show details
     </td>
   </tr>
