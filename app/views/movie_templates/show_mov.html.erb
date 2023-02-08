@@ -1,0 +1,52 @@
+<h1>Movie #<%=@id_num%> details</h1>
+
+<dl>
+  <dt>
+    Title
+  </dt>
+  <dd>
+    <%=@mov.title%>
+  </dd>
+
+  <dt>
+    Year
+  </dt>
+  <dd>
+    <%=@mov.year%>
+  </dd>
+
+  <dt>
+    Duration
+  </dt>
+  <dd>
+    <%=@mov.duration%>
+  </dd>
+
+  <dt>
+    Description
+  </dt>
+  <dd>
+    <%=@mov.description%>
+  </dd>
+
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="https://robohash.org/<%=@mov.image%>">
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%=time_ago_in_words(@mov.created_at)%> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%=time_ago_in_words(@mov.updated_at)%> ago
+  </dd>
+</dl>
