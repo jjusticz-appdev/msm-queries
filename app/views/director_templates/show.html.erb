@@ -1,1 +1,45 @@
-<h1>Director #<%=@an_id.to_s%></h1>
+<h1>Director #<%=@id_num%> details</h1>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%=@record.name%>
+  </dd>
+
+  <dt>
+    Dob
+  </dt>
+  <dd>
+    <%=@record.dob%>
+  </dd>
+
+  <dt>
+    Bio
+  </dt>
+  <dd>
+    <%=@record.bio%>
+  </dd>
+
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="https://robohash.org/<%=@record.image%>">
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%=time_ago_in_words(@record.created_at)%> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%=time_ago_in_words(@record.updated_at)%> ago
+  </dd>
+</dl>

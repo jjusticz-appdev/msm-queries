@@ -18,7 +18,7 @@ class DirectorsController < ApplicationController
   def director_details
 
     @id_num = params.fetch("an_id")
-    @record = Director.where({:id => @id_num})
+    @record = Director.where({:id => @id_num}).at(0)
 
     render({:template => "director_templates/show.html.erb"})
 
